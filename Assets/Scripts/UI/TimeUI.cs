@@ -1,3 +1,4 @@
+using System;
 using TMPro;
 using UnityEngine;
 
@@ -18,6 +19,7 @@ public class TimeUI : MonoBehaviour
 
     private void UpdateTime(int time)
     {
-        timeText.text = time.ToString();
+        TimeSpan timespan = TimeSpan.FromSeconds(time);
+        timeText.text = timespan.ToString(@"mm\:ss");
     }
 }

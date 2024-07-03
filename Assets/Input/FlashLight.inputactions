@@ -1,0 +1,34 @@
+{
+    "name": "FlashLight",
+    "maps": [
+        {
+            "name": "FlashLigth",
+            "id": "996427a7-d449-421f-bc0e-262eff608787",
+            "actions": [
+                {
+                    "name": "Swicth",
+                    "type": "Button",
+                    "id": "7fd1779b-7219-4bf3-89ad-88919c664c35",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                }
+            ],
+            "bindings": [
+                {
+                    "name": "",
+                    "id": "3078ee7e-9d27-4c08-9f70-16438b6839e5",
+                    "path": "<Keyboard>/f",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Swicth",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                }
+            ]
+        }
+    ],
+    "controlSchemes": []
+}
