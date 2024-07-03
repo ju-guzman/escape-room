@@ -35,16 +35,36 @@ public class SO_GameManager : ScriptableObject
     }
     #endregion
 
-    #region Player life
+    #region Player
+    #region flashlight
+    public bool HaveFlashlight = false;
+    #endregion
+    #region life
     public Action<int> OnPlayerLifeChange;
 
     public void UpdateLife(int life)
     {
-        if (life <= 0) {
+        if (life <= 0)
+        {
             GameOver();
         }
         OnPlayerLifeChange?.Invoke(life);
     }
+    #endregion
+    #region interaction
+    public Action<string> OnStartInteraction;
+    public Action OnEndInteraction;
+
+    public void StartInteraction(string message)
+    {
+        OnStartInteraction?.Invoke(message);
+    }
+
+    public void EndInteraction()
+    {
+        OnEndInteraction?.Invoke();
+    }
+    #endregion
     #endregion
 
     #region Game state
