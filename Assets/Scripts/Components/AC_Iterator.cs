@@ -32,10 +32,15 @@ public class AC_Iterator : MonoBehaviour
             gameManager.GameOver();
         }
         interactable = other.GetComponent<IInteract>();
+        if (interactable != null)
+        {
+            gameManager.StartInteraction(interactable.GetInteractionMessage());
+        }
     }
 
     private void OnTriggerExit(Collider other)
     {
         interactable = null;
+        gameManager.EndInteraction();
     }
 }
