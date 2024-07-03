@@ -1,1 +1,34 @@
-{}
+{
+    "name": "IA_Controllers",
+    "maps": [
+        {
+            "name": "Game",
+            "id": "2f5e1ad5-ab7c-4d98-9e2e-a87ef397320f",
+            "actions": [
+                {
+                    "name": "Interact",
+                    "type": "Button",
+                    "id": "51684efb-790b-40f7-854c-d0703f344c32",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                }
+            ],
+            "bindings": [
+                {
+                    "name": "",
+                    "id": "14d544e8-fbca-4bbe-9801-495b1f98b633",
+                    "path": "<Keyboard>/e",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Interact",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                }
+            ]
+        }
+    ],
+    "controlSchemes": []
+}
