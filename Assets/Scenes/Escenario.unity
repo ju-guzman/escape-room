@@ -444,7 +444,11 @@ PrefabInstance:
         type: 3}
       insertIndex: -1
       addedObject: {fileID: 1760807454}
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 1661462072092896, guid: 2bb6283c5e158eb4bb3d1180b800dc07,
+        type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 614130152}
   m_SourcePrefab: {fileID: 100100000, guid: 2bb6283c5e158eb4bb3d1180b800dc07, type: 3}
 --- !u!20 &312681791 stripped
 Camera:
@@ -789,6 +793,26 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 5d9e31e51999f8140a28bb843779b408, type: 3}
+--- !u!1 &614130148 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1661462072092896, guid: 2bb6283c5e158eb4bb3d1180b800dc07,
+    type: 3}
+  m_PrefabInstance: {fileID: 312681785}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &614130152
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 614130148}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9fd9edbb5a1e50d46bc01b67ae944847, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  inputs: {fileID: 11400000, guid: 00e2c4b5d6e9ac44e9526125ac8023a5, type: 2}
+  gameManager: {fileID: 11400000, guid: 360e907d3da98bd44adebef0c3dca569, type: 2}
 --- !u!1001 &619634725
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1823,7 +1847,19 @@ PrefabInstance:
         type: 3}
       insertIndex: -1
       addedObject: {fileID: 692475246}
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 9bc23cd4eb835e447a929a8ac009a35c,
+        type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1115416097}
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 9bc23cd4eb835e447a929a8ac009a35c,
+        type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1115416098}
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 9bc23cd4eb835e447a929a8ac009a35c,
+        type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1115416099}
   m_SourcePrefab: {fileID: 100100000, guid: 9bc23cd4eb835e447a929a8ac009a35c, type: 3}
 --- !u!4 &936998165 stripped
 Transform:
@@ -2174,6 +2210,74 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 2034a36924fe20a43b5428c8ff5ebdb0, type: 3}
+--- !u!1 &1115416096 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: 9bc23cd4eb835e447a929a8ac009a35c,
+    type: 3}
+  m_PrefabInstance: {fileID: 936998164}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1115416097
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1115416096}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9951a729444598b4a9163d94b34cc31c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _messageToShow: Presiona "E" para tomar la linterna.
+  _gameManager: {fileID: 11400000, guid: 360e907d3da98bd44adebef0c3dca569, type: 2}
+--- !u!135 &1115416098
+SphereCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1115416096}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 1
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Radius: 26.64
+  m_Center: {x: 0, y: 0, z: 0}
+--- !u!54 &1115416099
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1115416096}
+  serializedVersion: 4
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_CenterOfMass: {x: 0, y: 0, z: 0}
+  m_InertiaTensor: {x: 1, y: 1, z: 1}
+  m_InertiaRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ImplicitCom: 0
+  m_ImplicitTensor: 0
+  m_UseGravity: 0
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 126
+  m_CollisionDetection: 0
 --- !u!1001 &1165922490
 PrefabInstance:
   m_ObjectHideFlags: 0
