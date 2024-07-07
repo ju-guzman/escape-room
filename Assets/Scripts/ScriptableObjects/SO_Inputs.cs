@@ -11,6 +11,7 @@ public class SO_Inputs : ScriptableObject
     private IA_Controllers controls;
 
     public event Action OnInteract;
+    public event Action OnLightPress;
 
     private void OnEnable()
     {
@@ -24,6 +25,12 @@ public class SO_Inputs : ScriptableObject
         controls.Game.Enable();
 
         controls.Game.Interact.performed += Interact;
+        controls.Game.Ligth.performed += LightPress;
+    }
+
+    private void LightPress(InputAction.CallbackContext context)
+    {
+        OnLightPress?.Invoke();
     }
 
     private void Interact(InputAction.CallbackContext context)

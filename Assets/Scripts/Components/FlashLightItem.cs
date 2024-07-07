@@ -15,7 +15,7 @@ public class FlashLightItem : MonoBehaviour, IInteract
 
     void IInteract.Interact(GameObject actor)
     {
+        _gameManager.OnPickupFalshLight.Invoke();
         Destroy(gameObject);
-        _gameManager.HaveFlashlight = true;
     }
 }

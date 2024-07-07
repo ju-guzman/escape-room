@@ -37,7 +37,7 @@ public class SO_GameManager : ScriptableObject
 
     #region Player
     #region flashlight
-    public bool HaveFlashlight = false;
+    public Action OnPickupFalshLight;
     #endregion
     #region life
     public Action<int> OnPlayerLifeChange;

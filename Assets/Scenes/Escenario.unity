@@ -38,6 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 773852700}
+  m_IndirectSpecularColor: {r: 0.0030343635, g: 0.00618715, b: 0.014093148, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -150,7 +151,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1301780834733650, guid: 118d794af50d44affb397ac6d1b6a89b, type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1301780834733650, guid: 118d794af50d44affb397ac6d1b6a89b, type: 3}
       propertyPath: m_StaticEditorFlags
@@ -636,6 +637,14 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4804271852978680, guid: 2bb6283c5e158eb4bb3d1180b800dc07, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0.066989966
+      objectReference: {fileID: 0}
+    - target: {fileID: 4804271852978680, guid: 2bb6283c5e158eb4bb3d1180b800dc07, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0.12957351
+      objectReference: {fileID: 0}
     - target: {fileID: 114417258953216438, guid: 2bb6283c5e158eb4bb3d1180b800dc07,
         type: 3}
       propertyPath: f_RunSpeed
@@ -657,13 +666,61 @@ PrefabInstance:
         type: 3}
       insertIndex: -1
       addedObject: {fileID: 614130156}
+    - targetCorrespondingSourceObject: {fileID: 1211128644160540, guid: 2bb6283c5e158eb4bb3d1180b800dc07,
+        type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 312681792}
   m_SourcePrefab: {fileID: 100100000, guid: 2bb6283c5e158eb4bb3d1180b800dc07, type: 3}
---- !u!20 &312681791 stripped
-Camera:
-  m_CorrespondingSourceObject: {fileID: 20395701495721588, guid: 2bb6283c5e158eb4bb3d1180b800dc07,
+--- !u!1 &312681786 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1211128644160540, guid: 2bb6283c5e158eb4bb3d1180b800dc07,
     type: 3}
   m_PrefabInstance: {fileID: 312681785}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &312681792
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 312681786}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a79441f348de89743a2939f4d699eac1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_RenderShadows: 1
+  m_RequiresDepthTextureOption: 2
+  m_RequiresOpaqueTextureOption: 2
+  m_CameraType: 0
+  m_Cameras: []
+  m_RendererIndex: -1
+  m_VolumeLayerMask:
+    serializedVersion: 2
+    m_Bits: 1
+  m_VolumeTrigger: {fileID: 0}
+  m_VolumeFrameworkUpdateModeOption: 2
+  m_RenderPostProcessing: 0
+  m_Antialiasing: 0
+  m_AntialiasingQuality: 2
+  m_StopNaN: 0
+  m_Dithering: 0
+  m_ClearDepth: 1
+  m_AllowXRRendering: 1
+  m_AllowHDROutput: 1
+  m_UseScreenCoordOverride: 0
+  m_ScreenSizeOverride: {x: 0, y: 0, z: 0, w: 0}
+  m_ScreenCoordScaleBias: {x: 0, y: 0, z: 0, w: 0}
+  m_RequiresDepthTexture: 0
+  m_RequiresColorTexture: 0
+  m_Version: 2
+  m_TaaSettings:
+    m_Quality: 3
+    m_FrameInfluence: 0.1
+    m_JitterScale: 1
+    m_MipBias: 0
+    m_VarianceClampScale: 0.9
+    m_ContrastAdaptiveSharpening: 0
 --- !u!1001 &326999292
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -685,14 +742,6 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1279047784018206, guid: 118d794af50d44affb397ac6d1b6a89b, type: 3}
-      propertyPath: m_StaticEditorFlags
-      value: 2147483647
-      objectReference: {fileID: 0}
-    - target: {fileID: 1301780834733650, guid: 118d794af50d44affb397ac6d1b6a89b, type: 3}
-      propertyPath: m_IsActive
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 1301780834733650, guid: 118d794af50d44affb397ac6d1b6a89b, type: 3}
       propertyPath: m_StaticEditorFlags
       value: 2147483647
       objectReference: {fileID: 0}
@@ -2145,7 +2194,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1301780834733650, guid: 118d794af50d44affb397ac6d1b6a89b, type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1301780834733650, guid: 118d794af50d44affb397ac6d1b6a89b, type: 3}
       propertyPath: m_StaticEditorFlags
@@ -2389,7 +2438,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1301780834733650, guid: 118d794af50d44affb397ac6d1b6a89b, type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1301780834733650, guid: 118d794af50d44affb397ac6d1b6a89b, type: 3}
       propertyPath: m_StaticEditorFlags
@@ -2414,6 +2463,10 @@ PrefabInstance:
     - target: {fileID: 1513596015828096, guid: 118d794af50d44affb397ac6d1b6a89b, type: 3}
       propertyPath: m_Name
       value: CRTMonitor (9)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1513596015828096, guid: 118d794af50d44affb397ac6d1b6a89b, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 1513596015828096, guid: 118d794af50d44affb397ac6d1b6a89b, type: 3}
       propertyPath: m_StaticEditorFlags
@@ -2523,6 +2576,11 @@ PrefabInstance:
       propertyPath: m_Materials.Array.size
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 4848377723977951729, guid: 118d794af50d44affb397ac6d1b6a89b,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 114142728427468222, guid: 118d794af50d44affb397ac6d1b6a89b, type: 3}
     m_RemovedGameObjects: []
@@ -2561,7 +2619,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1301780834733650, guid: 118d794af50d44affb397ac6d1b6a89b, type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1301780834733650, guid: 118d794af50d44affb397ac6d1b6a89b, type: 3}
       propertyPath: m_StaticEditorFlags
@@ -3025,7 +3083,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1301780834733650, guid: 118d794af50d44affb397ac6d1b6a89b, type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1301780834733650, guid: 118d794af50d44affb397ac6d1b6a89b, type: 3}
       propertyPath: m_StaticEditorFlags
@@ -4665,7 +4723,6 @@ GameObject:
   - component: {fileID: 1760807456}
   - component: {fileID: 1760807455}
   - component: {fileID: 1760807457}
-  - component: {fileID: 1760807458}
   m_Layer: 0
   m_Name: Spot Light
   m_TagString: Untagged
@@ -4718,7 +4775,7 @@ Light:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1760807453}
-  m_Enabled: 1
+  m_Enabled: 0
   serializedVersion: 10
   m_Type: 0
   m_Shape: 0
@@ -4786,53 +4843,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _flashlight: {fileID: 1760807456}
---- !u!114 &1760807458
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1760807453}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 62899f850307741f2a39c98a8b639597, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_Actions: {fileID: -944628639613478452, guid: a7d29c68c5b245d459f77a8d7284ecf3,
-    type: 3}
-  m_NotificationBehavior: 2
-  m_UIInputModule: {fileID: 274860291}
-  m_DeviceLostEvent:
-    m_PersistentCalls:
-      m_Calls: []
-  m_DeviceRegainedEvent:
-    m_PersistentCalls:
-      m_Calls: []
-  m_ControlsChangedEvent:
-    m_PersistentCalls:
-      m_Calls: []
-  m_ActionEvents:
-  - m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 1760807457}
-        m_TargetAssemblyTypeName: flashlight, Assembly-CSharp
-        m_MethodName: onSwicthPressed
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 1
-    m_ActionId: 7fd1779b-7219-4bf3-89ad-88919c664c35
-    m_ActionName: FlashLigth/Swicth
-  m_NeverAutoSwitchControlSchemes: 0
-  m_DefaultControlScheme: 
-  m_DefaultActionMap: FlashLigth
-  m_SplitScreenIndex: -1
-  m_Camera: {fileID: 312681791}
+  _gameManager: {fileID: 11400000, guid: 360e907d3da98bd44adebef0c3dca569, type: 2}
+  inputs: {fileID: 11400000, guid: 00e2c4b5d6e9ac44e9526125ac8023a5, type: 2}
 --- !u!1001 &1783392326
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -5116,7 +5128,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1301780834733650, guid: 118d794af50d44affb397ac6d1b6a89b, type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1301780834733650, guid: 118d794af50d44affb397ac6d1b6a89b, type: 3}
       propertyPath: m_StaticEditorFlags
@@ -5365,7 +5377,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1301780834733650, guid: 118d794af50d44affb397ac6d1b6a89b, type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1301780834733650, guid: 118d794af50d44affb397ac6d1b6a89b, type: 3}
       propertyPath: m_StaticEditorFlags
@@ -5576,7 +5588,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1301780834733650, guid: 118d794af50d44affb397ac6d1b6a89b, type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1301780834733650, guid: 118d794af50d44affb397ac6d1b6a89b, type: 3}
       propertyPath: m_StaticEditorFlags
@@ -5748,7 +5760,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1301780834733650, guid: 118d794af50d44affb397ac6d1b6a89b, type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1301780834733650, guid: 118d794af50d44affb397ac6d1b6a89b, type: 3}
       propertyPath: m_StaticEditorFlags
@@ -5881,6 +5893,16 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Materials.Array.size
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4745508386222551217, guid: 118d794af50d44affb397ac6d1b6a89b,
+        type: 3}
+      propertyPath: m_AreaSize.x
+      value: 5.252136
+      objectReference: {fileID: 0}
+    - target: {fileID: 4745508386222551217, guid: 118d794af50d44affb397ac6d1b6a89b,
+        type: 3}
+      propertyPath: m_AreaSize.y
+      value: 3.3161
       objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 114142728427468222, guid: 118d794af50d44affb397ac6d1b6a89b, type: 3}

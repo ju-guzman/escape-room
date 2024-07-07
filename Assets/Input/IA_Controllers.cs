@@ -35,6 +35,15 @@ public partial class @IA_Controllers: IInputActionCollection2, IDisposable
                     ""processors"": """",
                     ""interactions"": """",
                     ""initialStateCheck"": false
+                },
+                {
+                    ""name"": ""Ligth"",
+                    ""type"": ""Button"",
+                    ""id"": ""99e477c2-160f-4ec1-b10f-4442cb88009a"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": false
                 }
             ],
             ""bindings"": [
@@ -48,6 +57,17 @@ public partial class @IA_Controllers: IInputActionCollection2, IDisposable
                     ""action"": ""Interact"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""57b69d2a-136b-45f6-8493-d8d5107e241f"",
+                    ""path"": ""<Keyboard>/#(F)"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Ligth"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
                 }
             ]
         }
@@ -57,6 +77,7 @@ public partial class @IA_Controllers: IInputActionCollection2, IDisposable
         // Game
         m_Game = asset.FindActionMap("Game", throwIfNotFound: true);
         m_Game_Interact = m_Game.FindAction("Interact", throwIfNotFound: true);
+        m_Game_Ligth = m_Game.FindAction("Ligth", throwIfNotFound: true);
     }
 
     public void Dispose()
@@ -119,11 +140,13 @@ public partial class @IA_Controllers: IInputActionCollection2, IDisposable
     private readonly InputActionMap m_Game;
     private List<IGameActions> m_GameActionsCallbackInterfaces = new List<IGameActions>();
     private readonly InputAction m_Game_Interact;
+    private readonly InputAction m_Game_Ligth;
     public struct GameActions
     {
         private @IA_Controllers m_Wrapper;
         public GameActions(@IA_Controllers wrapper) { m_Wrapper = wrapper; }
         public InputAction @Interact => m_Wrapper.m_Game_Interact;
+        public InputAction @Ligth => m_Wrapper.m_Game_Ligth;
         public InputActionMap Get() { return m_Wrapper.m_Game; }
         public void Enable() { Get().Enable(); }
         public void Disable() { Get().Disable(); }
@@ -136,6 +159,9 @@ public partial class @IA_Controllers: IInputActionCollection2, IDisposable
             @Interact.started += instance.OnInteract;
             @Interact.performed += instance.OnInteract;
             @Interact.canceled += instance.OnInteract;
+            @Ligth.started += instance.OnLigth;
+            @Ligth.performed += instance.OnLigth;
+            @Ligth.canceled += instance.OnLigth;
         }
 
         private void UnregisterCallbacks(IGameActions instance)
@@ -143,6 +169,9 @@ public partial class @IA_Controllers: IInputActionCollection2, IDisposable
             @Interact.started -= instance.OnInteract;
             @Interact.performed -= instance.OnInteract;
             @Interact.canceled -= instance.OnInteract;
+            @Ligth.started -= instance.OnLigth;
+            @Ligth.performed -= instance.OnLigth;
+            @Ligth.canceled -= instance.OnLigth;
         }
 
         public void RemoveCallbacks(IGameActions instance)
@@ -163,5 +192,6 @@ public partial class @IA_Controllers: IInputActionCollection2, IDisposable
     public interface IGameActions
     {
         void OnInteract(InputAction.CallbackContext context);
+        void OnLigth(InputAction.CallbackContext context);
     }
 }
