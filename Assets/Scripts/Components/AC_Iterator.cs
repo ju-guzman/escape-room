@@ -22,7 +22,10 @@ public class AC_Iterator : MonoBehaviour
 
     private void Interact()
     {
-        interactable?.Interact(gameObject);
+        if (interactable != null && !interactable.Equals(null))
+        {
+            interactable?.Interact(gameObject);
+        }
     }
 
     private void OnTriggerEnter(Collider other)

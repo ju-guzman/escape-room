@@ -1,6 +1,6 @@
 using UnityEngine;
 
-public class FlashLightItem : MonoBehaviour, IInteract
+public class KeyItem : MonoBehaviour, IInteract
 {
     [SerializeField]
     private string _messageToShow;
@@ -15,7 +15,7 @@ public class FlashLightItem : MonoBehaviour, IInteract
 
     void IInteract.Interact(GameObject actor)
     {
-        _gameManager.OnPickupFalshLight.Invoke();
+        _gameManager.OnPickupKey?.Invoke();
         _gameManager.OnEndInteraction.Invoke();
         Destroy(gameObject);
     }

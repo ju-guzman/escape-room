@@ -38,6 +38,9 @@ public class SO_GameManager : ScriptableObject
     #region Player
     #region flashlight
     public Action OnPickupFalshLight;
+    public Action OnPickupKey;
+    public Action OnLockerOpen;
+    public Action OnLostKey;
     #endregion
     #region life
     public Action<int> OnPlayerLifeChange;
